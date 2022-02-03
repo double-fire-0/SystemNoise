@@ -1,3 +1,3 @@
 # SystemNoise
-$/pm$
-$/Delta$
+$\pm$
+$\Delta$
