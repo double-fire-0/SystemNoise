@@ -1,3 +1,3 @@
 # SystemNoise
-%\+-%
-%Delta%
+$\+-$
+$Delta$
