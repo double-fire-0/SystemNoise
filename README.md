@@ -9,7 +9,7 @@ We introduce SysNoise, a frequently occurred but often overlooked noise in the d
 
 ## Results 
 
-###ImageNet Classification
+### ImageNet Classification
 
 |Architecture| Trained ACC | Decode $\Delta$ ACC  | Resize $\Delta$ ACC | Color Mode $\Delta$ ACC | FP16 $\Delta$ ACC | Int8 $\Delta$ ACC | Ceil Mode $\Delta$ ACC |
 |------------|------------|------------|------------|------------|------------|------------|------------|
