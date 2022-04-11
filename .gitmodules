@@ -1,0 +1,3 @@
+[submodule "EOC"]
+	path = EOC
+	url = https://github.com/ModelTC/EOC.git
