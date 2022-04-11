@@ -1,7 +1,7 @@
 import torch.nn as nn
 import torch
 import numpy as np
-from prototype.prototype.utils.misc import get_bn
+from EOC.prototype.utils.misc import get_bn
 
 
 BN = None

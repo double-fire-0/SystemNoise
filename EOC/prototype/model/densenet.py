@@ -3,8 +3,8 @@ import torch
 import torch.nn as nn
 import torch.nn.functional as F
 from collections import OrderedDict
-from prototype.spring.linklink.nn import SyncBatchNorm2d
-from prototype.prototype.utils.misc import get_bn
+from EOC.spring.linklink.nn import SyncBatchNorm2d
+from EOC.prototype.utils.misc import get_bn
 
 BN = None
 

@@ -5,7 +5,7 @@ import torch
 import json
 import cv2
 import numpy as np
-import prototype.spring.linklink as link
+import EOC.spring.linklink as link
 
 import torch.nn.functional as F
 import torchvision.transforms as transforms
@@ -14,11 +14,11 @@ import matplotlib.pyplot as plt
 from easydict import EasyDict
 from torch.autograd import Variable
 
-from prototype.prototype.solver.cls_solver import ClsSolver
-from prototype.prototype.utils.dist import link_dist
-from prototype.prototype.utils.misc import makedir, create_logger, get_logger, modify_state
-from prototype.prototype.data import build_imagenet_test_dataloader
-from prototype.prototype.data import build_custom_dataloader
+from EOC.prototype.solver.cls_solver import ClsSolver
+from EOC.prototype.utils.dist import link_dist
+from EOC.prototype.utils.misc import makedir, create_logger, get_logger, modify_state
+from EOC.prototype.data import build_imagenet_test_dataloader
+from EOC.prototype.data import build_custom_dataloader
 
 
 class Inference(ClsSolver):

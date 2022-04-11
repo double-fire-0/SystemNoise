@@ -6,13 +6,13 @@ import spring.linklink as link
 import torch.nn.functional as F
 
 from .base_solver import BaseSolver
-from prototype.prototype.utils.dist import link_dist, DistModule
-from prototype.prototype.utils.misc import makedir, create_logger, get_logger, count_params, count_flops, \
+from EOC.prototype.utils.dist import link_dist, DistModule
+from EOC.prototype.utils.misc import makedir, create_logger, get_logger, count_params, count_flops, \
     load_state_model, modify_state, parse_config
-from prototype.prototype.model import model_entry
-from prototype.prototype.data import build_imagenet_train_dataloader, build_imagenet_test_dataloader
-from prototype.prototype.data import build_custom_dataloader
-from prototype.prototype.utils.model_config import model_name_dict
+from EOC.prototype.model import model_entry
+from EOC.prototype.data import build_imagenet_train_dataloader, build_imagenet_test_dataloader
+from EOC.prototype.data import build_custom_dataloader
+from EOC.prototype.utils.model_config import model_name_dict
 from RobustART.noise.add_noise import AddNoise
 
 import numpy as np

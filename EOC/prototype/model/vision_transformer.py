@@ -4,7 +4,7 @@ import torch.nn as nn
 from einops import rearrange  # noqa
 from collections import OrderedDict
 from .layer import DropPath
-from prototype.prototype.utils.trunc_normal_initializer import trunc_normal_
+from EOC.prototype.utils.trunc_normal_initializer import trunc_normal_
 
 
 __all__ = ['vit_b32_224', 'vit_b16_224', 'deit_tiny_b16_224',

@@ -1,10 +1,10 @@
 import argparse
 from .cls_solver import ClsSolver
 from .cifar_cls_solver import CifarClsSolver
-from prototype.prototype.optimizer import optim_entry
-from prototype.prototype.utils.misc import load_state_optimizer
-from prototype.prototype.utils.ema import EMA
-from prototype.prototype.utils.dist import link_dist
+from EOC.prototype.optimizer import optim_entry
+from EOC.prototype.utils.misc import load_state_optimizer
+from EOC.prototype.utils.ema import EMA
+from EOC.prototype.utils.dist import link_dist
 
 
 def _build_optimizer(solver):

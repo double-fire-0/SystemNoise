@@ -1,8 +1,8 @@
 import numpy as np
 import torch.nn as nn
 import math
-from prototype.spring.linklink.nn import SyncBatchNorm2d
-from prototype.prototype.utils.misc import get_bn, get_logger
+from EOC.spring.linklink.nn import SyncBatchNorm2d
+from EOC.prototype.utils.misc import get_bn, get_logger
 
 regnetX_200M_config = {'WA': 36.44, 'W0': 24, 'WM': 2.49, 'DEPTH': 13, 'GROUP_W': 8, 'SE_ON': False}
 regnetX_400M_config = {'WA': 24.48, 'W0': 24, 'WM': 2.54, 'DEPTH': 22, 'GROUP_W': 16, 'SE_ON': False}

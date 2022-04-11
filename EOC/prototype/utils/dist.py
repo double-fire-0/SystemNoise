@@ -2,7 +2,7 @@ import os
 import torch
 import pickle
 import numpy as np
-import prototype.spring.linklink as link
+import EOC.spring.linklink as link
 
 
 def link_dist(func):

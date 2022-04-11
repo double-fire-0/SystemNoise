@@ -4,11 +4,11 @@ import datetime
 import torch
 import torch.nn as nn
 
-from prototype.prototype.utils.dist import link_dist
-from prototype.prototype.utils.misc import AverageMeter, accuracy, mixup_data, \
+from EOC.prototype.utils.dist import link_dist
+from EOC.prototype.utils.misc import AverageMeter, accuracy, mixup_data, \
     mix_criterion, cutmix_data
-from prototype.prototype.optimizer import FP16RMSprop, FP16SGD, FusedFP16SGD
-from prototype.prototype.solver.cls_solver import ClsSolver
+from EOC.prototype.optimizer import FP16RMSprop, FP16SGD, FusedFP16SGD
+from EOC.prototype.solver.cls_solver import ClsSolver
 
 
 class KurtosisWeight:

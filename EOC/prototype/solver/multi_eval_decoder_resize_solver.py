@@ -7,24 +7,24 @@ import datetime
 import torch
 import random
 import json
-import prototype.spring.linklink as link
+import EOC.spring.linklink as link
 import torch.nn.functional as F
 from copy import deepcopy
 
 from .base_solver import BaseSolver
-from prototype.prototype.utils.dist import link_dist, DistModule, broadcast_object
-from prototype.prototype.utils.misc import makedir, create_logger, get_logger, count_params, count_flops, \
+from EOC.prototype.utils.dist import link_dist, DistModule, broadcast_object
+from EOC.prototype.utils.misc import makedir, create_logger, get_logger, count_params, count_flops, \
     param_group_all, AverageMeter, accuracy, load_state_model, load_state_optimizer, mixup_data, \
     mix_criterion, cutmix_data, parse_config
-from prototype.prototype.utils.ema import EMA
-from prototype.prototype.model import model_entry
-from prototype.prototype.optimizer import optim_entry, FP16RMSprop, FP16SGD, FusedFP16SGD, FP16AdamW
-from prototype.prototype.lr_scheduler import scheduler_entry
-from prototype.prototype.data import build_imagenet_train_dataloader, build_imagenet_test_dataloader
-from prototype.prototype.data import build_custom_dataloader
-from prototype.prototype.loss_functions import LabelSmoothCELoss
-from prototype.prototype.utils.user_analysis_helper import send_info
-from prototype.prototype.spring import SPRING_MODELS_REGISTRY
+from EOC.prototype.utils.ema import EMA
+from EOC.prototype.model import model_entry
+from EOC.prototype.optimizer import optim_entry, FP16RMSprop, FP16SGD, FusedFP16SGD, FP16AdamW
+from EOC.prototype.lr_scheduler import scheduler_entry
+from EOC.prototype.data import build_imagenet_train_dataloader, build_imagenet_test_dataloader
+from EOC.prototype.data import build_custom_dataloader
+from EOC.prototype.loss_functions import LabelSmoothCELoss
+from EOC.prototype.utils.user_analysis_helper import send_info
+from prototype.EOC.spring import SPRING_MODELS_REGISTRY
 
 
 

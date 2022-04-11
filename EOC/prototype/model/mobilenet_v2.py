@@ -2,8 +2,8 @@ import torch
 import torch.nn as nn
 from torch.nn import init
 
-import prototype.spring.linklink as link
-from prototype.prototype.utils.misc import get_bn
+import EOC.spring.linklink as link
+from EOC.prototype.utils.misc import get_bn
 
 __all__ = ['mobilenet_v2']
 

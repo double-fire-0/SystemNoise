@@ -1,7 +1,7 @@
 import os
 import logging
 import torch
-import prototype.spring.linklink as link
+import EOC.spring.linklink as link
 from collections import defaultdict
 import numpy as np
 try:
@@ -172,9 +172,9 @@ def count_params(model):
 
 def count_flops(model, input_shape):
     try:
-        from prototype.prototype.model.layer import CondConv2d
-        from prototype.prototype.model.layer import WeightNet, WeightNet_DW
-        from prototype.prototype.model.vision_transformer import MultiHeadAttention
+        from EOC.prototype.model.layer import CondConv2d
+        from EOC.prototype.model.layer import WeightNet, WeightNet_DW
+        from EOC.prototype.model.vision_transformer import MultiHeadAttention
     except NotImplementedError:
         print('Check whether the file exists!')
 

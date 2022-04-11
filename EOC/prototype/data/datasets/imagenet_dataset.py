@@ -5,12 +5,13 @@ import time
 import numpy as np
 
 from .base_dataset import BaseDataset
-from prototype.prototype.data.image_reader import build_image_reader
+from EOC.prototype.data.image_reader import build_image_reader
 
-import prototype.spring.linklink as link
+import EOC.spring.linklink as link
 import random
 import torch
 
+from EOC.prototype.data.utils.imagenet_s_gen import ImageTransfer
 
 class ImageNetDataset(BaseDataset):
     """
@@ -141,6 +142,32 @@ class ImageNetDataset(BaseDataset):
                 }
                 writer.write(json.dumps(res, ensure_ascii=False) + '\n')
         writer.flush()
+
+
+class DecoderResizeImageNetDataset(ImageNetDataset):
+    def __init__(self, root_dir, meta_file, transform=None,
+                 read_from='mc', evaluator=None, image_reader_type='pil', resize_type='pil-bilinear', resize=224,
+                 transform_type='val', server_cfg={}):
+        self.image_decoder_resize = ImageTransfer(root_dir=root_dir, meta_file=meta_file, save_root='',
+                                                  decoder_type=image_reader_type, resize_type=resize_type,
+                                                  resize=224, transform_type='val')
+        super(DecoderResizeImageNetDataset, self).__init__(root_dir=root_dir, meta_file=meta_file, transform=transform,
+                                                           read_from=read_from, evaluator=evaluator,
+                                                           image_reader_type=image_reader_type, server_cfg=server_cfg)
+
+    def __getitem__(self, idx):
+        img, label = self.image_decoder_resize.getimage(idx)
+        filename = osp.join(self.root_dir, curr_meta['filename'])
+        if self.transform is not None:
+            img = self.transform(img)
+
+        item = {
+            'image': img,
+            'image_id': idx,
+            'label': label,
+            'filename': filename
+        }
+        return item
 
 
 class RankedImageNetDataset(BaseDataset):

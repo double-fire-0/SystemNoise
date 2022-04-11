@@ -1,7 +1,7 @@
 import torch
 import torch.nn as nn
-from prototype.spring.linklink.nn import SyncBatchNorm2d
-from prototype.prototype.utils.misc import get_logger, get_bn, get_norm_layer
+from EOC.spring.linklink.nn import SyncBatchNorm2d
+from EOC.prototype.utils.misc import get_logger, get_bn, get_norm_layer
 
 
 __all__ = ['ResNet', 'resnet18_official', 'resnet34_official', 'resnet50_official', 'resnet101_official',

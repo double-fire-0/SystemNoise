@@ -1,7 +1,7 @@
 import torch.nn as nn
 import torch
 import math
-from prototype.spring.linklink.nn import SyncBatchNorm2d
+from EOC.spring.linklink.nn import SyncBatchNorm2d
 import torch.nn.functional as F
 from torch.nn import init
 
@@ -9,7 +9,7 @@ import re
 import collections
 from collections import OrderedDict
 
-from prototype.prototype.utils.misc import get_logger, get_bn
+from EOC.prototype.utils.misc import get_logger, get_bn
 
 BN = None
 

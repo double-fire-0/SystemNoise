@@ -1,4 +1,4 @@
-import prototype.spring.linklink as link
+import EOC.spring.linklink as link
 
 from torch.optim import SGD, RMSprop, Adadelta, Adagrad, Adam, AdamW  # noqa F401
 

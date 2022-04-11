@@ -1,7 +1,7 @@
 from torch.utils.data import DataLoader
 from torchvision import transforms
 
-from .datasets import ImageNetDataset, ImageNet_C_Dataset, RankedImageNetDataset
+from .datasets import ImageNetDataset, ImageNet_C_Dataset, RankedImageNetDataset, DecoderResizeImageNetDataset
 from .transforms import build_transformer, TwoCropsTransform, GaussianBlur
 from .auto_augmentation import ImageNetPolicy
 from .sampler import build_sampler
@@ -231,14 +231,27 @@ def build_imagenet_test_dataloader(cfg_dataset, data_type='test'):
                 transform=transformer
             )
         else:
-            dataset = ImageNetDataset(
-                root_dir=cfg_test['root_dir'],
-                meta_file=cfg_test['meta_file'],
-                transform=transformer,
-                read_from=cfg_dataset['read_from'],
-                evaluator=evaluator,
-                image_reader_type=image_reader.get('type', 'pil'),
-            )
+            if cfg_test.get("imagenet_decoder_resize", False):
+                dataset = DecoderResizeImageNetDataset(
+                    root_dir=cfg_test['root_dir'],
+                    meta_file=cfg_test['meta_file'],
+                    transform=transformer,
+                    read_from=cfg_dataset['read_from'],
+                    evaluator=evaluator,
+                    image_reader_type=image_reader.get('type', 'pil'),
+                    resize_type=cfg_test['resize_type'],
+                    resize=cfg_test['resize'],
+                    transform_type=cfg_test['transform_type']
+                )
+            else:
+                dataset = ImageNetDataset(
+                    root_dir=cfg_test['root_dir'],
+                    meta_file=cfg_test['meta_file'],
+                    transform=transformer,
+                    read_from=cfg_dataset['read_from'],
+                    evaluator=evaluator,
+                    image_reader_type=image_reader.get('type', 'pil'),
+                )
     # build sampler
 
     assert cfg_test['sampler'].get('type', 'distributed') == 'distributed'

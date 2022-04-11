@@ -1,6 +1,6 @@
 import torch
 from torch.utils.data.sampler import Sampler
-import prototype.spring.linklink as link
+import EOC.spring.linklink as link
 import math
 import numpy as np
 
