@@ -57,4 +57,4 @@ For experiments of pre-processing, we provide the dataset for you to evaluate.
 
 
 ## Note
-**For Decoder and Resize noise, we strongly recommend that you use the online generation method we provide in the sample code instead of downloading their data sets. While the noise of color mode is generated on Altas, so download this dataset is necessaty.**
+**For Decoder and Resize noise, we strongly recommend that you use the online generation method we provide in the sample code instead of downloading their data sets. While the noise of color mode is generated on Altas, so download this dataset is necessary.**
