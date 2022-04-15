@@ -2,9 +2,10 @@
 
 
 <p align="center"><img src="system_overview.png" width="700">
-
+  
 	
-***<font color=red>Warning !</font>***
+	
+-! Warning !-
 Some parts of the code for training and inference are missing due to the bug of anonymous github.
 Please refer to <https://github.com/AnonymousSystemNoise/AnonymousSystemNoise> for the complete code
 
