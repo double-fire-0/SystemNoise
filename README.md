@@ -5,7 +5,7 @@
   
 	
 	
-- ![#f03c15](https://via.placeholder.com/15/f03c15/000000?text=Warning !) `#f03c15`
+- ![#f03c15](https://via.placeholder.com/15/f03c15/000000?text=+) `#f03c15`
 	
 Some parts of the code for training and inference are missing due to the bug of anonymous github.
 Please refer to <https://github.com/AnonymousSystemNoise/AnonymousSystemNoise> for the complete code
