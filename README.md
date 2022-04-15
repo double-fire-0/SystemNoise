@@ -5,7 +5,7 @@
   
 	
 	
-"-! Warning !-"
+- Warning !
 Some parts of the code for training and inference are missing due to the bug of anonymous github.
 Please refer to <https://github.com/AnonymousSystemNoise/AnonymousSystemNoise> for the complete code
 
