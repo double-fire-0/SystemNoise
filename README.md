@@ -3,6 +3,10 @@
 
 <p align="center"><img src="system_overview.png" width="700">
 
+	
+***<font color=red>Warning !</font>***
+Some parts of the code for training and inference are missing due to the bug of anonymous github.
+Please refer to <https://github.com/AnonymousSystemNoise/AnonymousSystemNoise> for the complete code
 
 ## Abstract
 We introduce SysNoise, a frequently occurred but often overlooked noise in the deep learning training-deployment cycle. In particular, SysNoise happens when the source training system switches to a disparate target system in deployments, where various tiny system mismatch adds up to a non-negligible difference. We identify and classify SysNoise into three categories based on the inference stage, namely pre-processing noise, model inference noise, and post-processing noise. Then, we build a holistic benchmark to quantitatively measure the impact of SysNoise, comprehending image classification and object detection tasks. Specifically, we find a well-trained ResNet-50 can degenerate to a ResNet-34 under certain cases of SysNoise and much worse. Additionally, SysNoise seems to be highly diverse and common mitigations like data augmentation and adversarial training show limited effects on it, revealing its distinction from the existing adversarial noises and natural noises. Together, our findings open a new research topic and we hope this work will raise research attention to deep learning deployment systems accounting for model performance.
