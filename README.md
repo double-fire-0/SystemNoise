@@ -6,7 +6,7 @@
 	
 	
 ```diff
-- Warning !
+** Warning !**
 ```
 	
 Some parts of the code for training and inference are missing due to the bug of anonymous github.
